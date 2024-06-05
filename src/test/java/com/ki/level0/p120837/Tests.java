@@ -8,23 +8,53 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class Tests {
     @Test
-    @DisplayName("적의 hp가 23이면 5마리의 개미가 필요해")
+    @DisplayName("적의 hp가 10이면 2마리의 개미가 필요해")
     void t1() {
-        assertThat(new Solution().solution(23)).isEqualTo(5);
+        assertThat(new Solution().solution(10)).isEqualTo(2);
     }
     @Test
-    @DisplayName("적의 hp가 24면 6마리의 개미가 필요해")
+    @DisplayName("적의 hp가 9면 3마리의 개미가 필요해")
     void t2() {
-        assertThat(new Solution().solution(24)).isEqualTo(6);
+        assertThat(new Solution().solution(9)).isEqualTo(3);
     }
     @Test
-    @DisplayName("적의 hp가 564면 6마리의 개미가 필요해")
+    @DisplayName("적의 hp가 8면 2마리의 개미가 필요해")
     void t4() {
-        assertThat(new Solution().solution(564)).isEqualTo(114);
+        assertThat(new Solution().solution(8)).isEqualTo(2);
     }
     @Test
-    @DisplayName("적의 hp가 999면 201마리의 개미가 필요해")
+    @DisplayName("적의 hp가 7면 3마리의 개미가 필요해")
     void t3() {
-        assertThat(new Solution().solution(999)).isEqualTo(201);
+        assertThat(new Solution().solution(7)).isEqualTo(3);
+    }
+    @Test
+    @DisplayName("적의 hp가 6면 2마리의 개미가 필요해")
+    void t5() {
+        assertThat(new Solution().solution(6)).isEqualTo(2);
+    }
+    @Test
+    @DisplayName("적의 hp가 5면 1마리의 개미가 필요해")
+    void t6() {
+        assertThat(new Solution().solution(5)).isEqualTo(1);
+    }
+    @Test
+    @DisplayName("적의 hp가 4면 2마리의 개미가 필요해")
+    void t7() {
+        assertThat(new Solution().solution(4)).isEqualTo(2);
+    }
+    @Test
+    @DisplayName("적의 hp가 3면 1마리의 개미가 필요해")
+    void t8() {
+        assertThat(new Solution().solution(3)).isEqualTo(1);
+    }
+    @Test
+    @DisplayName("적의 hp가 2면 2마리의 개미가 필요해")
+    void t9() {
+        assertThat(new Solution().solution(2)).isEqualTo(2);
+    }
+    @Test
+    @DisplayName("적의 hp가 1면 1마리의 개미가 필요해")
+    void t10() {
+        assertThat(new Solution().solution(1)).isEqualTo(1);
     }
 }

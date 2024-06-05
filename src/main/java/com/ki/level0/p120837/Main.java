@@ -12,7 +12,7 @@ package com.ki.level0.p120837;
 //0 ≤ hp ≤ 1000
 public class Main {
     public static void main(String[] args) {
-
+        System.out.println(new Solution().solution(10));
     }
 }
 
@@ -20,27 +20,24 @@ class Solution {
     public int solution(int hp) {
         int gAntCount = 0;
         int sAntCount = 0;
-        int wAntCount = 1;
+        int wAntCount = 0;
         int gAntAtk = 5;
         int sAntAtk = 3;
-        int x = hp;
-        int a = 0;
-        int b;
+        int wAntAtk = 1;
 
-        if (hp >= gAntAtk){
-            gAntCount = x / gAntAtk;
-            a = hp % gAntAtk;
+        if (hp >= gAntAtk) {
+            gAntCount = hp / gAntAtk;
+            hp = hp % gAntAtk;
         }
-        if (a >= sAntAtk){
-            int k = a;
-            sAntCount = k / sAntAtk;
-            b = a % sAntAtk;
-            if (b == 0){
-                return sAntCount + gAntCount;
-            }
+        if (hp >= sAntAtk) {
+            sAntCount = hp / sAntAtk;
+            hp = hp % sAntAtk;
         }
-        b = wAntCount;
+        if (hp >= wAntAtk){
+            wAntCount = hp;
+        }
 
-        return gAntCount + sAntCount + b;
+
+        return gAntCount + sAntCount + wAntCount;
     }
 }
