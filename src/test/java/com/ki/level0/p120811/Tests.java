@@ -7,8 +7,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class Tests {
     @Test
-    @DisplayName("값 5, 4")
+    @DisplayName("값 7")
     void t1() {
-        assertThat(new Solution().solution(new int[]{1, 2, 3, 4, 5})).isEqualTo(new int[]{2, 4, 6, 8, 10});
+        assertThat(new Solution().solution(new int[]{1, 2, 7, 10, 11})).isEqualTo(7);
+    }
+    @Test
+    @DisplayName("값 0")
+    void t2() {
+        assertThat(new Solution().solution(new int[]{9, -1, 0})).isEqualTo(0);
     }
 }
