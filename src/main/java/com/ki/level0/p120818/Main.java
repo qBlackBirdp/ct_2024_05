@@ -14,7 +14,6 @@ class Solution {
         } else if (price >= 300000 && price < 500000) {
             price -= price * 0.1;
         } else if (price >= 500000) {
-
             price -= price * 0.2;
         }
         return (int) price;
