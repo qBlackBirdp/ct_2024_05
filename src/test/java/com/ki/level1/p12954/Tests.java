@@ -23,4 +23,10 @@ public class Tests {
     void t3() {
         assertThat(new Solution().solution(-4, 2)).isEqualTo(new int[]{-4, -8});
     }
+
+    @Test
+    @DisplayName("값 0, 0")
+    void t4() {
+        assertThat(new Solution().solution(0, 2)).isEqualTo(new int[]{0, 0});
+    }
 }
