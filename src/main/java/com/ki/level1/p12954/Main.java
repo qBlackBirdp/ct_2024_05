@@ -11,7 +11,6 @@ class Solution {
         if (n == 0) {
             return new long[0];
         }
-
         long[] answer = new long[n];
 
         for (int i = 0; i < n; i++) {
