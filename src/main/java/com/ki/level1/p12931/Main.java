@@ -6,22 +6,15 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-
     }
 }
-
 class Solution {
     public int solution(int n) {
         String num = String.valueOf(n);
         int sum = 0;
 
-
-        char[] numbers = num.toCharArray();
-        List<Integer> list = new ArrayList<>();
-
-
-        for (int i = 0; i < numbers.length; i++) {
-
+        for (char numbers : num.toCharArray()) {
+            sum += Character.getNumericValue(numbers);
         }
 
         return sum;
